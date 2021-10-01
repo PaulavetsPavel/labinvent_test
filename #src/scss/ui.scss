@@ -1,0 +1,28 @@
+//====================================================================================================
+._tabs,
+._sub-tabs {
+}
+._tabs-item,
+._sub-tabs-item {
+  &._active {
+    background-color: #fff;
+    border-bottom: 1px solid #fff;
+  }
+  &._sub-active {
+    background-color: #fff;
+    border-right: 1px solid #fff;
+  }
+}
+._tabs-block,
+._sub-tabs-block {
+  display: none;
+  &._active {
+    display: block;
+    background-color: #fff;
+    border-bottom: none;
+  }
+  &._sub-active {
+    display: block;
+    background-color: #fff;
+  }
+}
