@@ -1,7 +1,7 @@
 //<МИКСИНЫ>===============================================================================================
 @import 'mixins';
 @import 'fonts';
-@import url(https://fonts.googleapis.com/css?family=Roboto:regular,500,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto:regular,500,600,700);
 
 $fontFamily: 'Roboto';
 
@@ -20,8 +20,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  width: 1910px;
-  padding: 0px 5px;
+  width: 1920px;
 }
 
 .page {
@@ -32,7 +31,7 @@ body {
     display: flex;
   }
   &__body {
-    flex: 0 0 auto;
+    flex: 0 0 1640px;
     width: 100%;
     background-color: #f1f3f2;
     display: flex;
@@ -42,7 +41,7 @@ body {
 .body__content {
   flex: 0 0 auto;
   width: 100%;
-  padding: 25px 18px;
+  padding: 20px 18px;
   display: flex;
   flex-wrap: wrap;
   box-shadow: 1px 1.7px 2px 0 rgba(4, 4, 4, 0.09);
@@ -63,10 +62,9 @@ body {
   // .widgets__container
   &__container {
     flex: 0 0 228px;
-    // height: 857px;
     height: 100%;
     box-shadow: inset 0px 3px 7px 0 rgba(0, 0, 0, 0.35);
-    padding: 20px;
+    padding: 19px;
     position: relative;
     &::after {
       content: '<';
@@ -104,7 +102,7 @@ body {
     letter-spacing: 0.28px;
     color: #2f3b4c;
     border-bottom: 1px solid #bfc2c4;
-    padding: 11px 0 11px 7px;
+    padding: 9px 0 7px 5px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -129,10 +127,10 @@ body {
 
   // .widgets__body
   &__body {
-    padding: 37px 22px 13px 22px;
+    padding: 35px 22px 0px 20px;
 
     &--sampler {
-      padding: 25px 30px 0px 0px;
+      padding: 15px 35px 0px 0px;
     }
     & img:last-child {
       margin: 6px 0px 0px 0px;
@@ -144,7 +142,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin: 0px 0px 16px 0px;
+    margin: 0px 2px 16px 0px;
   }
 
   // .widgets__icon
@@ -154,49 +152,59 @@ body {
     justify-content: flex-start;
     position: relative;
     &:first-child {
-      margin: 0px 8px 0px 0px;
+      margin: 0px 3px 0px 0px;
     }
     &:last-child {
-      margin: 0px 0px 0px 26px;
+      margin: 3px 0px 0px 24px;
     }
     & span {
       font-size: 9px;
       letter-spacing: 0.18px;
       text-align: center;
       color: #2f3b4c;
-      margin: 5px 0px 0px 0px;
+      margin: 0px 0px 0px 0px;
+    }
+    & img:first-child {
+      margin: 3px 0px 0px 0px;
+    }
+    & img:last-child {
+      margin: 17px 0px 0px 0px;
     }
   }
 
   // .widgets__text
   &__text {
     font-size: 12px;
-    line-height: 2.92;
     letter-spacing: 0.24px;
     text-align: center;
     color: #2f3b4c;
+    margin: 35px 0px 0px 5px;
   }
 }
 
 .icon {
   // .icon__sampler
   &__sampler {
+    margin: 0px 5px 0px 0px;
+    & svg {
+      width: 85px;
+      height: 130px;
+    }
   }
   // .icon__empty
   &__empty {
     & svg {
-      width: 30px;
-      height: 50px;
+      width: 35px;
+      height: 55px;
     }
     &::before {
       content: 'a';
       position: absolute;
-      left: 11px;
-      top: 27px;
+      left: 14px;
+      top: 32px;
       font-size: 11px;
       letter-spacing: 0.22px;
       text-transform: uppercase;
-
       color: #2f3b4c;
     }
   }
@@ -204,14 +212,14 @@ body {
   // .icon__full
   &__full {
     & svg {
-      width: 30px;
-      height: 50px;
+      width: 35px;
+      height: 55px;
     }
     &::before {
       content: 'b';
       position: absolute;
-      left: 12px;
-      top: 27px;
+      left: 14px;
+      top: 32px;
       font-size: 11px;
       letter-spacing: 0.22px;
       text-transform: uppercase;
@@ -276,13 +284,13 @@ body {
     background-color: #f1f3f2;
     border-right: 1px solid #bdc9d1;
     border-bottom: 1px solid #bdc9d1;
-    padding: 0 39px 0 17px;
+    padding: 2px 39px 0 17px;
     cursor: pointer;
     & span {
-      margin: 0 5px 0 0;
+      margin: 0 4px 0 0;
       &:first-child {
         text-transform: uppercase;
-        margin: 0 15px 0 0;
+        margin: 0 13px 0 0;
       }
     }
     &._active {
@@ -296,7 +304,7 @@ body {
       text-transform: uppercase;
       color: #2574a9;
       margin: 0 25px 0 0px;
-      padding: 0 0 0 18px;
+      padding: 0 0 0 15px;
       position: relative;
       &::before {
         content: '';
@@ -311,10 +319,13 @@ body {
       }
     }
     &:nth-child(2) {
-      padding: 0 20px 0 17px;
+      padding: 0 30px 0 17px;
+      & span {
+        margin: 2px 5px 0px 0px;
+      }
     }
     &:last-child {
-      padding: 0 76px 0 17px;
+      padding: 2px 62px 0 17px;
     }
   }
 
@@ -351,7 +362,7 @@ body {
 
   // .method__nav-item
   &__nav-item {
-    height: 37px;
+    height: 36px;
     border-bottom: 1px solid #bdc9d1;
     display: flex;
     justify-content: left;
@@ -384,7 +395,6 @@ body {
   &__settings {
     flex: 0 0 613px;
     border-left: solid 1px #bfc2c4;
-    padding: 13px 0 0 0;
   }
 }
 
@@ -396,7 +406,7 @@ body {
   // .method-settings__radio-items
   &__radio-items {
     display: flex;
-    padding: 10px 0px 0px 34px;
+    padding: 9px 0px 0px 34px;
   }
 
   // .method-settings__radio-item
@@ -404,12 +414,15 @@ body {
     font-size: 12px;
     letter-spacing: 0.24px;
     color: #2f3a4c;
-    margin: 0px 19px 0px 0px;
+    margin: 0px 22px 0px 0px;
     display: flex;
     align-items: center;
     position: relative;
     & input {
       margin: 0px 6px 0px 0px;
+    }
+    &:last-child {
+      margin: 0px 0px 0px 5px;
     }
   }
 
@@ -419,6 +432,9 @@ body {
     & tr {
       height: 30px;
       text-align: right;
+      &:first-child {
+        height: 23px;
+      }
       &:nth-child(odd) {
         background-color: #f4fafd;
       }
@@ -432,9 +448,11 @@ body {
       font-family: Helvetica;
       font-size: 12px;
       letter-spacing: 0.24px;
+      font-weight: normal;
       color: #fff;
       text-align: center;
       background-color: #77a1bf;
+      padding: 0px 0px 0px 1px;
     }
     & td {
       width: 115px;
@@ -442,10 +460,10 @@ body {
       font-size: 12px;
       letter-spacing: 0.24px;
       border-right: 1px solid #bfc2c4;
-      padding: 0px 6px 0px 0px;
+      padding: 3px 8px 0px 4px;
       &:nth-child(1) {
         width: 30px;
-        text-align: center;
+        text-align: left;
       }
       &:nth-child(2) {
         width: 100px;
@@ -461,12 +479,13 @@ body {
 .columns {
   // .columns__content
   &__content {
+    margin: 0px 0px 10px 0px;
   }
 
   // .columns__inicial
   &__inicial {
     display: flex;
-    padding: 20px 0 10px 40px;
+    padding: 25px 0 10px 33px;
   }
 
   // .columns__title
@@ -478,8 +497,7 @@ body {
     color: #2f3b4c;
     display: flex;
     align-items: center;
-    margin: 0px 0px 15px 20px;
-
+    margin: 10px 0px 13px 15px;
     &::before {
       content: '';
       width: 11px;
@@ -494,6 +512,12 @@ body {
       margin: 0 0 0 9px;
       border-top: 1px solid #acacb4;
     }
+    &:last-child {
+      margin: 20px 0px 13px 18px;
+    }
+    &--post-run {
+      margin: 10px 0px 17px 15px;
+    }
   }
 }
 .inicial {
@@ -501,7 +525,7 @@ body {
   &__image {
     width: 320px;
     height: 110px;
-    margin: 0px 45px 0px 0px;
+    margin: 0px 55px 0px 0px;
     & img {
       max-width: 100%;
     }
@@ -512,8 +536,8 @@ body {
     flex: 0 0 154px;
     height: 86px;
     border: solid 1px #2f3b4c;
-    padding: 8px 0 10px 11px;
-    // font-family: Helvetica;
+    padding: 6px 0 10px 10px;
+    margin: 12px 20px 0px 0px;
     font-size: 12px;
     line-height: 1.5;
     letter-spacing: 0.24px;
@@ -528,16 +552,16 @@ body {
     display: flex;
     flex-wrap: wrap;
     width: 613px;
-    padding: 0px 0px 15px 0;
+    padding: 0px 0px 15px 6px;
   }
 
   // .controls__item
   &__item {
-    flex: 0 0 220px;
+    flex: 0 0 266px;
     display: flex;
     align-items: center;
     &:nth-child(odd) {
-      margin: 5px 30px 5px 30px;
+      margin: 5px 30px 3px 30px;
     }
   }
 
@@ -548,19 +572,28 @@ body {
     font-size: 12px;
     letter-spacing: 0.24px;
     color: #727272;
+    &:last-child {
+      margin: 10px 0px 0px 0px;
+    }
+    &--post-run {
+      margin: 2px 0px 0px 5px;
+    }
   }
 
   // .controls__output
   &__output {
     width: 65px;
     height: 25px;
-    margin: 0px 6px 0px 0px;
-    padding: 8px 19px 8px 12px;
+    margin: 2px 6px 0px 15px;
+    padding: 6px 19px 8px 12px;
     border: solid 1px #bfc2c4;
     font-family: Helvetica;
     font-size: 11px;
     letter-spacing: 0.22px;
     color: #2f3b4c;
+    &--post-run {
+      margin: 2px 5px 0px 17px;
+    }
   }
 
   // .controls__units
@@ -575,7 +608,7 @@ body {
   &__checkbox {
     display: flex;
     align-items: center;
-    margin: 0px 0px 10px 42px;
+    margin: 0px 0px 0px 35px;
     & span {
       font-family: Helvetica;
       font-size: 12px;
@@ -646,7 +679,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 11px 0 0;
+    margin: 0 10px 0 0;
     &:hover {
       color: rgb(19, 19, 155);
       font-weight: bold;
@@ -676,12 +709,12 @@ body {
 }
 
 #id_clock {
-  margin: 0 0 0 30px;
+  margin: 0 0 0 35px;
 }
 
 //===========================================================================================
 .chart {
-  flex: 0 0 775px;
+  flex: 0 0 760px;
   height: 506px;
   border: solid 1px #bfc2c4;
   background-color: #fff;
@@ -689,6 +722,7 @@ body {
   // .chart__title
   &__title {
     height: 46px;
+    margin: -1px 0px 0px -1px;
   }
 
   // .chart__content
@@ -704,8 +738,9 @@ body {
 
   // .chart__schedule
   &__schedule {
-    width: 709px;
+    width: 704px;
     max-height: 100%;
+    margin: 22px 0px 0px 4px;
     & img {
       max-width: 100%;
       height: 100%;
@@ -726,7 +761,7 @@ body {
   // .legend__items
   &__items {
     display: flex;
-    padding: 10px 0 15px 17px;
+    padding: 10px 0 15px 16px;
   }
 
   // .legend__item
@@ -735,6 +770,9 @@ body {
     margin: 0 29px 0 0;
     & button:hover {
       font-weight: bold;
+    }
+    &:last-child {
+      margin: 0px 0px 0px 8px;
     }
   }
 
@@ -769,12 +807,13 @@ body {
   &__button {
     width: 45px;
     height: 45px;
-    margin: 10px 10px 0 10px;
+    margin: 8px 10px 0 10px;
   }
 
   // .display-selection__button--1
   &__button--1 {
     background: #fff url(../img/icons/button_1.png) no-repeat;
+    margin: 10px 10px 0px 10px;
   }
 
   // .display-selection__button--2
@@ -785,6 +824,7 @@ body {
   // .display-selection__button--3
   &__button--3 {
     background: url(../img/icons/button_3.png) 0 0 no-repeat;
+    margin: 6px 10px 0 10px;
   }
 }
 
@@ -794,7 +834,7 @@ body {
   height: 506px;
   border: solid 1px #bfc2c4;
   background-color: #fff;
-  margin: 0 0 0 14px;
+  margin: -1px 0 0 15px;
 
   // .spectra__title
   &__title {

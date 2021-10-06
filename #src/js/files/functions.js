@@ -1,4 +1,5 @@
 //=================
+
 //Tabs
 let tabs = document.querySelectorAll('._tabs');
 for (let index = 0; index < tabs.length; index++) {
@@ -42,6 +43,8 @@ for (let index = 0; index < subTabs.length; index++) {
 
 let radio = document.querySelectorAll('.method-settings__radio-item');
 
+//=======================================================
+//Clock
 function digitalClock() {
   let date = new Date();
   let hours = date.getHours();
@@ -56,3 +59,62 @@ function digitalClock() {
 }
 
 digitalClock();
+
+//=========================================================
+//Progress
+
+function userProgress(flag) {
+  time = 60000;
+  let start = 0;
+  let progressElement = document.getElementById('progress');
+  let intervalId = setInterval(() => {
+    if (start > 100) {
+      clearInterval(intervalId);
+    } else {
+      progressElement.value = start;
+    }
+    start++;
+  }, 1000);
+}
+
+function timePassed() {
+  let start = 0;
+  let progressElement = document.getElementById('time-passed');
+  let intervalId = setInterval(() => {
+    if (start > 60) {
+      clearInterval(intervalId);
+    } else {
+      if (start < 10) {
+        progressElement.innerHTML = `00:0${start}`;
+      } else {
+        progressElement.innerHTML = `00:${start}`;
+      }
+    }
+    start++;
+  }, 1000);
+}
+
+function timeLeft() {
+  let start = 59;
+  let progressElement = document.getElementById('time-left');
+  let intervalId = setInterval(() => {
+    if (start < 0) {
+      clearInterval(intervalId);
+    } else {
+      if (start < 10) {
+        progressElement.innerHTML = `-00:0${start}`;
+      } else {
+        progressElement.innerHTML = `-00:${start}`;
+      }
+    }
+    start--;
+  }, 1000);
+}
+
+function progress() {
+  userProgress();
+  timePassed();
+  setTimeout(() => {
+    timeLeft();
+  }, 1000);
+}
